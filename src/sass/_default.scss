@@ -1,0 +1,313 @@
+body{
+	font-family: $font-base;
+	//font-family: "Neue Haas Unica W01 Regular";
+    background: $white;
+    color: $white;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.46;
+  //  background-image: url('../../images/delta-am-01.png') ; 
+}
+*{
+	 min-height: 0;
+    min-width: 0;
+}
+html {
+  height: 100%;
+}
+
+
+a{
+	text-decoration: none;
+	color: $white;
+}
+
+.contenedor-center {
+  /*  display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+    */
+}
+
+#the-wrapper{
+	min-height:100%;
+	position:relative;
+	overflow: hidden;
+}
+
+.row{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+/*****************
+	header
+
+******************/
+
+.main-header{
+	width: 100%;
+	position: relative;
+	background: $blue-dark;
+}
+
+.tagline svg{
+	padding: 10px;
+	max-width: 400px;
+}
+.menu{
+	margin: 0 auto;
+	width: 570px;
+	position: relative;
+	text-align: center;
+	clear: both;
+	padding: 20px 0;
+	ul{
+		position: relative;
+		display: inline-block;
+	}
+	li{
+		display: inline-block;
+		color: $blue-dark;
+
+		a{
+			color: $blue-dark;
+			height: 77px;
+			width: 100%;
+			padding: 0 5px;
+			line-height: 77px;
+			text-align: center;
+			text-transform: uppercase;
+			border-bottom: 2px solid;
+			&:after{
+			//	content: '\2022';
+			}
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	.festivales a{
+		border-color: $red;
+	}
+	.videos a{
+		border-color: $orange;
+	}
+	.playlists a{
+		border-color: $green;
+	}
+	.articulos a{
+		border-color: $blue;
+	}
+}
+
+.wrapper-logo{
+	display: flex;
+	width: 100%;
+	background: url(../images/musica_header.jpg);
+	background-size: cover;
+	min-height: 420px;
+	display:flex;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+	.the-logo{
+		width: 355px;		
+	}
+}
+
+
+
+/*******************************************
+		menu mobile
+
+**********************************************/
+
+/****** nav ******/
+#nav-trigger {
+  display: none;
+  text-align: center; 
+  clear: both;
+  float: left;
+	span {
+	    display: block;
+	    background-color: none;
+	    border: 2px solid $acent;
+	    border-radius: 20px;
+	    color: white;
+	    cursor: pointer;
+	    text-transform: uppercase;
+	    clear: both;
+	    width: 200px;
+	    padding: 5px 10px;
+	    margin: 0 auto;
+	    font-size: 11px;
+		letter-spacing: 1px;
+		min-height: 36px;
+		line-height: 22px;
+		&:hover {
+      	background-color:  $blue-dark; 
+      	}
+	  }
+	  span:after {
+      display: inline-block;
+      margin-left: 10px;
+      width: 20px;
+      height: 10px;
+      content: "";
+      border-left: solid 10px transparent;
+      border-top: solid 10px $acent;
+      border-right: solid 10px transparent; 
+  	}
+  	span.open:after {
+      border-left: solid 10px transparent;
+      border-top: none;
+      border-bottom: solid 10px $acent;
+      border-right: solid 10px transparent; }
+}
+ 
+nav#nav-mobile {
+  position: relative;
+  display: none; 
+	 ul {
+	    display: none;
+	    list-style-type: none;
+	    position: relative;
+	    left: 0;
+	    right: 0;
+	    margin-left: auto;
+	    margin-right: auto;
+	    text-align: center;
+		li {
+			    display: block;
+			    padding: 5px 0;
+			    margin: 0 5px;
+			    border-bottom: solid 1px $acent; }
+		li:last-child {
+	    	  border-bottom: none; }
+	       a {
+		    display: block;
+		    color: white;
+		    padding: 10px 30px; 
+			&:hover{
+				color: #fff; 
+			}
+		}
+	}// ul
+}
+
+
+
+/* =Media Queries
+-------------------------------------------------------------- */
+@media all and (max-width: 950px) {
+  #nav-trigger {
+    display: block; }
+
+  nav#nav-main {
+    display: none; }
+
+  nav#nav-mobile {
+    display: block; }
+}
+
+
+
+
+
+
+/****************
+
+
+***********************************************/
+
+.container-center{
+	margin: 0 auto;
+	padding-bottom: 90px;
+}
+
+.item-centered{
+	display: block;
+	margin: 0 auto;
+	float: none;
+}
+
+/*****************************
+
+		TEXTOS
+
+******************************/
+
+.main-title{
+	margin: 10px 0;
+	span{
+		color: $acento;
+	}
+}
+
+.text-centered{
+	text-align: center;
+}
+
+p{
+
+
+}
+
+h1{
+	font-size: 35px;
+	font-family: $font-thin;
+}
+
+h2{
+	font-size: 28px;
+	font-family: $font-thin;
+}
+
+h3{
+	font-size: 22px;
+	
+}
+
+h4{
+	font-size: 18px;
+}
+/*****************************
+
+		Modal
+******************************/
+
+.modal-content{
+	background: $blue-dark;
+	.modal-title{
+		text-align: center;
+	}
+	.modal-body{
+		font-size: 80%;
+	}
+}
+
+/*****************************
+
+		footer
+
+******************************/
+#mainFooter{
+	
+	a:hover{
+		color: $blue-dark;
+	}
+}
+
+.footer-info{
+	font-size: 70%;
+	line-height: 120%;
+	a{
+		text-decoration: underline;
+	}
+}

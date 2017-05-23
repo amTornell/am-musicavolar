@@ -1,0 +1,56 @@
+.item{
+  border-top: 5px solid $blue;
+  border-radius: 5px; 
+  overflow: hidden;
+  background: $blue;
+  background-size: cover cover;
+  padding: 20px;
+  min-height: 400px;
+ // display: flex;
+
+  header{
+    clear: both;
+    float: left;
+    width: 100%;
+  }
+  .icon{
+    // border-radius: 50px;
+    // display: block;
+    // border: 1px solid $white;
+    // text-align: center;
+    // width: 30px;
+    // height: 30px;
+    // line-height: 28px;
+    // float: left;
+
+  }
+  p.date{
+    font-size: 10px;
+    text-transform: uppercase;
+    float: right;
+  }
+  h2{
+    max-width: 400px;
+    line-height: 130%;
+  }
+  summary{
+    padding: 20px 0;
+    max-width: 400px;
+    font-size: 13px;
+  }
+
+}
+
+.item-articulos{
+  border-color: $blue;
+}
+
+.item-playlist{
+  border-color: $green;
+}
+.item-videos{
+  border-color: $orange;
+}
+.item-festivales{
+  border-color: $red;
+}
