@@ -1,17 +1,33 @@
 .item{
-  border-top: 5px solid $blue;
-  border-radius: 5px; 
-  overflow: hidden;
-  background: $blue;
-  background-size: cover cover;
-  padding: 20px;
-  min-height: 400px;
+  
  // display: flex;
 
+  article{
+    border-top: 5px solid $blue;
+    border-radius: 5px; 
+    overflow: hidden;
+    background-size: cover cover;
+    padding: 20px;
+    min-height: 400px;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+    background-position: center;
+    &:hover{
+    }
+  }
   header{
     clear: both;
     float: left;
     width: 100%;
+    position: absolute;
+    top: 45px;
+    width: calc(100% - 60px);
+    @include bp-medium {
+      top: 30px;
+    }
   }
   .icon{
     // border-radius: 50px;
@@ -32,6 +48,9 @@
   h2{
     max-width: 400px;
     line-height: 130%;
+    @include bp-medium {
+      font-size: 18px;
+    }
   }
   summary{
     padding: 20px 0;
@@ -41,16 +60,16 @@
 
 }
 
-.item-articulos{
+.item-articulos article{
   border-color: $blue;
 }
 
-.item-playlist{
+.item-playlist article{
   border-color: $green;
 }
-.item-videos{
+.item-videos article{
   border-color: $orange;
 }
-.item-festivales{
+.item-festivales article{
   border-color: $red;
 }

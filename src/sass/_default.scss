@@ -10,10 +10,12 @@ body{
     line-height: 1.46;
   //  background-image: url('../../images/delta-am-01.png') ; 
 }
+
 *{
 	 min-height: 0;
     min-width: 0;
 }
+
 html {
   height: 100%;
 }
@@ -59,14 +61,21 @@ a{
 .tagline svg{
 	padding: 10px;
 	max-width: 400px;
+	@include bp-small {
+      max-width: 90%;
+    }
 }
 .menu{
 	margin: 0 auto;
-	width: 570px;
+	max-width: 570px;
+	width: 100%;
 	position: relative;
 	text-align: center;
 	clear: both;
 	padding: 20px 0;
+	@include bp-small {
+     // padding: 0;
+    }
 	ul{
 		position: relative;
 		display: inline-block;
@@ -84,25 +93,47 @@ a{
 			text-align: center;
 			text-transform: uppercase;
 			border-bottom: 2px solid;
+			cursor: pointer;
+			 transition: all 0.3s ease-in-out;
 			&:after{
 			//	content: '\2022';
 			}
 			&:hover{
 				text-decoration: none;
 			}
+			@include bp-small {
+		     height: 40px;
+		     line-height: 40px;
+		    }
 		}
 	}
 	.festivales a{
 		border-color: $red;
+		&:hover{
+			 transition: all 0.3s ease-in;
+			 color: $red;
+		}
 	}
 	.videos a{
 		border-color: $orange;
+		&:hover{
+			 transition: all 0.3s ease-in;
+			 color: $orange;
+		}
 	}
 	.playlists a{
 		border-color: $green;
+		&:hover{
+			 transition: all 0.3s ease-in;
+			 color: $green;
+		}
 	}
 	.articulos a{
 		border-color: $blue;
+		&:hover{
+			 transition: all 0.3s ease-in;
+			 color: $blue;
+		}
 	}
 }
 
@@ -116,115 +147,21 @@ a{
     justify-content: center;
     align-content: flex-start;
     align-items: center;
+    @include bp-small{
+     min-height: 200px;
+    }
 	.the-logo{
-		width: 355px;		
+		max-width: 380px;
+		width: 100%;
+		img{
+			width: 80%;
+		}	
 	}
 }
 
 
 
-/*******************************************
-		menu mobile
-
-**********************************************/
-
-/****** nav ******/
-#nav-trigger {
-  display: none;
-  text-align: center; 
-  clear: both;
-  float: left;
-	span {
-	    display: block;
-	    background-color: none;
-	    border: 2px solid $acent;
-	    border-radius: 20px;
-	    color: white;
-	    cursor: pointer;
-	    text-transform: uppercase;
-	    clear: both;
-	    width: 200px;
-	    padding: 5px 10px;
-	    margin: 0 auto;
-	    font-size: 11px;
-		letter-spacing: 1px;
-		min-height: 36px;
-		line-height: 22px;
-		&:hover {
-      	background-color:  $blue-dark; 
-      	}
-	  }
-	  span:after {
-      display: inline-block;
-      margin-left: 10px;
-      width: 20px;
-      height: 10px;
-      content: "";
-      border-left: solid 10px transparent;
-      border-top: solid 10px $acent;
-      border-right: solid 10px transparent; 
-  	}
-  	span.open:after {
-      border-left: solid 10px transparent;
-      border-top: none;
-      border-bottom: solid 10px $acent;
-      border-right: solid 10px transparent; }
-}
- 
-nav#nav-mobile {
-  position: relative;
-  display: none; 
-	 ul {
-	    display: none;
-	    list-style-type: none;
-	    position: relative;
-	    left: 0;
-	    right: 0;
-	    margin-left: auto;
-	    margin-right: auto;
-	    text-align: center;
-		li {
-			    display: block;
-			    padding: 5px 0;
-			    margin: 0 5px;
-			    border-bottom: solid 1px $acent; }
-		li:last-child {
-	    	  border-bottom: none; }
-	       a {
-		    display: block;
-		    color: white;
-		    padding: 10px 30px; 
-			&:hover{
-				color: #fff; 
-			}
-		}
-	}// ul
-}
-
-
-
-/* =Media Queries
--------------------------------------------------------------- */
-@media all and (max-width: 950px) {
-  #nav-trigger {
-    display: block; }
-
-  nav#nav-main {
-    display: none; }
-
-  nav#nav-mobile {
-    display: block; }
-}
-
-
-
-
-
-
-/****************
-
-
-***********************************************/
+/*****************************************/
 
 .container-center{
 	margin: 0 auto;
@@ -298,8 +235,9 @@ h4{
 
 ******************************/
 #mainFooter{
-	
-	a:hover{
+	text-align: center;
+	padding-bottom: 5px;
+	p, a{
 		color: $blue-dark;
 	}
 }
