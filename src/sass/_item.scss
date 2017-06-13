@@ -61,11 +61,18 @@
 }
 
 .item-instagram{
-  .EmbedCaption, .EmbedTimestamp, .EmbedTimestamp:visited{
-    font-size: 12px !important;
+  iframe{
+    margin-left: calc(50% - 306px);
+    margin-left: -webkit-calc(50% - 306px);
+    margin-left: -moz-calc(50% - 306px);
+    margin-left: 0;
+    width:100%; 
+    max-height: 385px;
   }
   article{
     padding: 0;
+    height: auto;
+    display: block;
     p{
        word-wrap:break-word;
        color: $blue-dark;
