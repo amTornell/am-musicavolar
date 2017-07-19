@@ -8,6 +8,7 @@
 
     var item = $('.item');
    
+    // menu
     $('#nav-main a').on('click', function(){
       var clase= $(this).attr('rel');
       item.fadeOut('slow');
@@ -18,6 +19,10 @@
     if( $('nameid').length ){
 
     }
+
+    $('#registro').on('shown.bs.modal', function () {
+      $('#nombre').focus()
+    })
 
     $(window).on('load resize', function () {
        // $('iframe[src*="instagram.com"]').responsiveInstagram();

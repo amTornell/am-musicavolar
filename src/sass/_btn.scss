@@ -37,4 +37,8 @@
      	font-family: Arial, Helvetica;
         letter-spacing: 1px;
     }
+    &:focus{
+        color: $white;
+        text-decoration: none;
+    }
 }

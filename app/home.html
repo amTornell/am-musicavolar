@@ -206,8 +206,9 @@
       <section class="wrapper-logo">
         <span class="the-logo animated fadeInUp">
           <p class="text-centered">
-            <a href="">
-             <img src="images/musica_logo.png" alt="La música te hace volar" />
+             <img src="images/musica_logo.png" alt="La música te hace volar" /><br>
+            <a href="" class="btn-register btn-main" data-toggle="modal" data-target="#registro">
+              Recibe noticias
             </a>
           </p>
         </span> 
@@ -546,6 +547,39 @@
       </div>
     </footer>
 
+
+    <div id="registro" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Regístrate</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-register">
+              <fieldset>
+              <div class="form-group">
+                  <label for="nombre">Nombre completo</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Correo electrónico</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="nombre@mail.com" required>
+                </div>
+                <p class="text-centered"><button type="submit" name="Enviar" value="Enviar registro" class="btn-main">Enviar registro</button></p>
+              </fieldset>
+            </form>
+            <div class="alert alert-success">
+              <p>Registro exitoso</p>
+            </div>
+            <div class="alert alert-danger">
+              <p>Inténtalo más tarde</p>
+            </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
   <!-- scripts -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <!--<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>-->
@@ -553,6 +587,7 @@
   <script src="js/vendor/bootstrap.min.js"></script>
   
   <script src="js/app.js"></script>
+
 
 </body>
 </html>
